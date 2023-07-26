@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<title>Download Files</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button2 {background-color: #008CBA;} /* Blue */
+
+</style>
+<body>
+
+{% if user %}
+
+<h2>{{user.name}}</h2>
+
+
+<div class="w3-container">
+  <h2>Profile-photo</h2>
+
+  <div class="w3-card-4" style="width:50%">
+    <img src="{{ user.profile_photo.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
+    <div class="w3-container w3-center">
+      <p><a href="{{user.profile_photo.url}}" download><button class="button button2">Download</button></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container">
+    <h2>Aadhar-card</h2>
+  
+    <div class="w3-card-4" style="width:50%">
+      <img src="{{user.aadhar_card.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
+      <div class="w3-container w3-center">
+        <p><a href="{{user.aadhar_card.url}}" download><button class="button button2">Download</button></a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container">
+    <h2>Pan-card</h2>
+  
+    <div class="w3-card-4" style="width:50%">
+      <img src="{{user.pan_card.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
+      <div class="w3-container w3-center">
+        <p><a href="{{user.pan_card.url}}" download><button class="button button2">Download</button></a></p>
+      </div>
+    </div>
+  </div> 
+
+  <div class="w3-container">
+    <h2>Voter-Id</h2>
+  
+    <div class="w3-card-4" style="width:50%">
+      <img src="{{user.voter_id.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
+      <div class="w3-container w3-center">
+        <p><a href="{{user.voter_id.url}}" download><button class="button button2">Download</button></a></p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="w3-container">
+    <h2>Marksheet</h2>
+  
+    <div class="w3-card-4" style="width:50%">
+      <img src="{{user.marksheet.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
+      <div class="w3-container w3-center">
+        <p><a href="{{user.marksheet.url}}" download><button class="button button2">Download</button></a></p>
+      </div>
+    </div>
+  </div> 
+
+{% endif %}
+</body>
+</html>
