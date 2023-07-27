@@ -34,6 +34,7 @@
     <img src="{{ user.profile_photo.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
     <div class="w3-container w3-center">
       <p><a href="{{user.profile_photo.url}}" download><button class="button button2">Download</button></a></p>
+      <p><a href="{% url 'profile_photo_as_zip' user_id=user.id %}"><button class="button button2">Download As ZIP</button></a></p>
     </div>
   </div>
 </div>
@@ -45,6 +46,7 @@
       <img src="{{user.aadhar_card.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
       <div class="w3-container w3-center">
         <p><a href="{{user.aadhar_card.url}}" download><button class="button button2">Download</button></a></p>
+        <p><a href="{% url 'aadhar_card_as_zip' user_id=user.id %}"><button class="button button2">Download As ZIP</button></a></p>
       </div>
     </div>
   </div>
@@ -56,6 +58,7 @@
       <img src="{{user.pan_card.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
       <div class="w3-container w3-center">
         <p><a href="{{user.pan_card.url}}" download><button class="button button2">Download</button></a></p>
+        <p><a href="{% url 'pan_card_as_zip' user_id=user.id %}"><button class="button button2">Download As ZIP</button></a></p>
       </div>
     </div>
   </div> 
@@ -67,6 +70,7 @@
       <img src="{{user.voter_id.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
       <div class="w3-container w3-center">
         <p><a href="{{user.voter_id.url}}" download><button class="button button2">Download</button></a></p>
+        <p><a href="{% url 'voter_id_as_zip' user_id=user.id %}"><button class="button button2">Download As ZIP</button></a></p>
       </div>
     </div>
   </div>
@@ -79,6 +83,7 @@
       <img src="{{user.marksheet.url}}" alt="Alps" style="height:300px;width:300px;margin-left:150px;">
       <div class="w3-container w3-center">
         <p><a href="{{user.marksheet.url}}" download><button class="button button2">Download</button></a></p>
+        <p><a href="{% url 'marksheet_as_zip' user_id=user.id %}"><button class="button button2">Download As ZIP</button></a></p>
       </div>
     </div>
   </div> 
