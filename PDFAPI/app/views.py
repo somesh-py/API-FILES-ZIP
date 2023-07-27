@@ -84,10 +84,8 @@ def download(request,id):
 def download_files_as_zip(request, user_id):
     if request.method == 'GET':
         # Check if the user exists and matches the authenticated user
-
+        print(user_id)
         user = User_files.objects.get(userid=user_id)
-
-
 
         # Assuming you have a user model with file fields
         files_to_download = [
